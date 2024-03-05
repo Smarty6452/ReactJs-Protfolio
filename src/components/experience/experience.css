@@ -1,0 +1,84 @@
+#experience {
+    padding: 3rem 0;
+    background-color: var(--color-bg);
+    color: var(--color-light);
+    text-align: center;
+  }
+  
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .skill-card {
+    flex: 0 0 33.33%; /* Adjust to show desired number of skills */
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .skill-card img {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+  }
+  
+  .skill-card h4 {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+  }
+  
+  .skill-card p {
+    color: var(--color-light);
+    margin: 0.25rem 0;
+  }
+  
+  .slider-controls {
+    margin-top: 1rem;
+  }
+  
+  .slide-button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-light);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .slide-button.left {
+    margin-right: 1rem;
+  }
+  
+  .slide-button.right {
+    margin-left: 1rem;
+  }
+  
+  .slide-button:focus {
+    outline: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .skill-card {
+      flex: 0 0 50%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .skill-card {
+      flex: 0 0 100%;
+    }
+  
+    .slider-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+  }
+  

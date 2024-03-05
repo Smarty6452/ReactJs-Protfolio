@@ -1,0 +1,108 @@
+/* Define your color variables */
+:root {
+  --color-light: #f7f7f7;
+  --color-bg: #333;
+  --color-white: #fff;
+}
+
+/* Main navbar styles */
+nav {
+  width: 100%;
+  padding: 1.7rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(to bottom, #292c31, #1e2024); /* Gradient background */
+  backdrop-filter: blur(15px);
+  transition: background-color 0.3s;
+}
+
+/* Desktop navigation links */
+.desktop-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktop-nav a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.desktop-nav a.active {
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+/* Mobile menu button */
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+  color: var(--color-light);
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+/* Mobile navigation links */
+.mobile-nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #292c31, #1e2024); /* Gradient background */
+  padding: 1rem;
+  transition: background-color 0.3s;
+}
+
+.mobile-nav-links.open {
+  display: flex;
+}
+
+.mobile-nav-links a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav-links a:hover {
+  color: var(--color-white);
+}
+
+/* Media Queries (for small screens) */
+@media screen and (max-width: 768px) {
+  nav {
+      padding: 0.7rem;
+  }
+  
+  .desktop-nav {
+      display: none;
+  }
+
+  .mobile-menu {
+      display: block;
+  }
+
+  .mobile-nav-links {
+      background: linear-gradient(to bottom, #292c31, #1e2024); /* Gradient background */
+  }
+
+  .nav.show, .nav.hide {
+      opacity: 1;
+      pointer-events: auto;
+      transition: opacity 0.3s ease, transform 0.2s ease;
+  }
+
+  .nav.hide {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+  }
+}

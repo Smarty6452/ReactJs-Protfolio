@@ -1,0 +1,102 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define your color variables */
+:root {
+    --color-light: #f7f7f7;
+    --color-bg: #333;
+    --color-white: #fff;
+}
+
+/* Main footer styles */
+.footer {
+    background: linear-gradient(to bottom, #292c31, #1e2024); /* Gradient background */
+    padding: 3rem 0;
+    text-align: center;
+    margin-top: 7rem;
+    position: relative;
+}
+
+/* Permalinks styling */
+.permalinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+    list-style: none; /* Remove default list styles */
+}
+
+.permalinks li {
+    margin: 0;
+}
+
+.permalinks a {
+    color: var(--color-white); /* White color for links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.permalinks a:hover {
+    color: var(--color-bg); /* Background color for hover */
+    text-decoration: underline;
+}
+
+/* Social icons styling */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.footer-socials a {
+    background: var(--color-bg);
+    color: var(--color-white);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.footer-socials a:hover {
+    background: transparent;
+    color: var(--color-bg);
+    border-color: var(--color-bg);
+}
+
+/* Fun animation for social icons on hover */
+.footer-socials a:hover svg {
+    transform: rotate(360deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Copyright text styling */
+.footer-copyright {
+    margin-bottom: 6rem;
+    color: var(--color-light);
+}
+
+/* Additional footer elements */
+.additional-info {
+    color: var(--color-white);
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+/* Media Queries (for small screens) */
+@media screen and (max-width: 600px) {
+    .permalinks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    
+}
